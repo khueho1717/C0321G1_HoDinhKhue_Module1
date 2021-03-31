@@ -2,16 +2,59 @@
 <html>
 <head>
 	<title>Tạo form đơn giản</title>
+	<style>
+		#sothichcn{
+			background-color: orange;
+			text-align: center;
+			color: white;
+		}
+		.thongtin{
+			text-align: right;
+			color: blue;
+		}
+	</style>
 </head>
 <body>
-	<form style="width: 500px;height: 800px">
-		<p style="background-color: yellow;text-align: center;">SỞ THÍCH CÁ NHÂN </p>
-		<h4>Họ và tên: <input type="text" name="yourname"></h4>
-		<h4>Email: <input type="text" name="mail"></h4>
-		<h4>Sở thích:
-			<input type="checkbox" value="the thao"> the thao <input type="checkbox" value="am nhac"> am nhac <input type="checkbox" value="doc sach"> doc sach</br> <pre>         </pre><input type="checkbox" value="luot web"> luot web
-		 </h4>
-		
+	<form action="">
+		<table>
+			<tr id="sothichcn">
+				<td colspan="2">SỞ THÍCH CÁ NHÂN</td>
+			</tr>
+			<tr>
+				<td class="thongtin">Họ và tên </td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td class="thongtin">Email</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td class="thongtin">Sở thích</td>
+				<td>
+					<table>
+						<tr>
+							<td><input type="checkbox" name="sothich"> thể thao</td>
+							<td><input type="checkbox" name="sothich">Âm nhạc</td>
+							<td><input type="checkbox" name="sothich">Đọc sách </td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="sothich">Lướt web </td>
+							<td><input type="checkbox" name="sothich">Chơi game</td>
+							<td><input type="checkbox" name="sothich">Điện ảnh </td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="sothich">Du lịch </td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="guithongtin" value=" Gửi thông tin">
+				<input type="reset" name="nhaplai" value="Nhập lại "></td>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>

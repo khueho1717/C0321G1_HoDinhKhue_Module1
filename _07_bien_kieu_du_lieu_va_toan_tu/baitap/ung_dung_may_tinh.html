@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td><h3><b>Caculador</b></h3></td>
+			</tr>
+			<tr>
+				<td>
+					<pre><input type="text" id="col1">  <input type="text" id="col2"></pre>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="add" value="Addition(+)" onclick="cong()">
+					<input type="button" name="sub" value="Subtraction(-)" onclick="tru()">
+					<input type="button" name="mul" value="Multiplication(X)" onclick="nhan()">
+					<input type="button" name="div" value="Division(/)" onclick="chia()">  
+				</td>
+			</tr>
+			<tr>
+				<td><input type="reset" name="trolai" value="reset"></td>
+			</tr>
+		</table>
+	</form>
+	<p id="kq"></p>
+	<script>
+		
+		function cong() {
+			let a=parseInt(document.getElementById("col1").value);
+			let b=parseInt(document.getElementById("col2").value);
+			let c=a+b;
+			document.getElementById("kq").innerHTML="Result: "+c;
+		}
+		function tru() {
+			let a=parseInt(document.getElementById("col1").value);
+			let b=parseInt(document.getElementById("col2").value);
+			let c=a-b;
+			document.getElementById("kq").innerHTML="Result: "+c;
+		}
+		function nhan() {
+			let a=parseInt(document.getElementById("col1").value);
+			let b=parseInt(document.getElementById("col2").value);
+			let c=a*b;
+			document.getElementById("kq").innerHTML="Result: "+c;
+		}
+		function chia() {
+			let a=parseInt(document.getElementById("col1").value);
+			let b=parseInt(document.getElementById("col2").value);
+			let c=a/b;
+			document.getElementById("kq").innerHTML="Result: "+c;
+		}
+	</script>
+</body>
+</html>

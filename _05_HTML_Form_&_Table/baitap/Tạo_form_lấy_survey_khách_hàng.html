@@ -25,18 +25,18 @@
 	<form action="" method="get">
 		<h3>Market Research Survey</h3>
 		<p>Please take a few moments to complete this satisfaction survey.</p>
-		<label><b>What is your age range?</b></label><br>
-		<select>
+		<label for="chon1"><b>What is your age range?</b></label><br>
+		<select id="chon1">
 			<option>$0 - $25,000</option>
 			<option>$25,001 - $50,000</option>
 			<option>$50,000 - $100,000</option>
 			<option>$100,000+</option>
 		</select><br>
-		<label>Gender Identity</label><br>
-		<input type="radio" name="Gender" value="male"> Male<br>
-		<input type="radio" name="Gender" value="female"> Female<br>
-		<input type="radio" name="Gender" value="nonbinary"> Nonbinary<br>
-		<input type="radio" name="Gender" value="orther"> Other<br>
+		<label for="Gender"><b>Gender Identity</b></label><br>
+		<input type="radio" name="Gender" value="male" id="male"> <label for="male">Male</label><br>
+		<input type="radio" name="Gender" value="female" id="female"> <label for="female">Female</label><br>
+		<input type="radio" name="Gender" value="nonbinary" id="nonbinary"> <label for="nonbinary">Nonbinary</label><br>
+		<input type="radio" name="Gender" value="orther" id="orther"> <label for="orther">Other</label><br>
 		<input type="text" name="orther"><br>
 		<label><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></label><br>
 		<input type="checkbox" name="product" value="product1">Product 1<br>

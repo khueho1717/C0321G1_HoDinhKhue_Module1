@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<label for="weight">Cân nặng</label>
+		<input type="text" id="weight" placeholder="nhập cân nặng">kg<br><br>
+		<label for="height">Chiều cao</label>
+		<input type="text" id="height" placeholder="nhập chiều cao">m<br><br>
+		<button type="button" onclick="BMI()">Kiểm tra</button>
+	</form>
+	<p id=kq></p>
+	<script>
+		function BMI(){
+			let weight=parseFloat(document.getElementById('weight').value);
+			let height=parseFloat(document.getElementById('height').value);
+			let bmi=(weight/(height*height));
+			if (bmi<18.5){
+				document.getElementById('kq').innerHTML="Underweight";
+			}else if (bmi<25) {
+				document.getElementById('kq').innerHTML="Nomal";
+			}else if (bmi<30) {
+				document.getElementById('kq').innerHTML="Overweight";
+			}else  {
+				document.getElementById('kq').innerHTML="Obese";
+			}
+		}
+	</script>
+</body>
+</html>

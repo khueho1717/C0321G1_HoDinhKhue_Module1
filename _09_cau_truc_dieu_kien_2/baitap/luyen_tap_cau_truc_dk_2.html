@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>bài 1: chuyển đọ C sang độ F.</h3>
+	<pre><label for="nhietdo">nhập đô C: </label><input type="text" id="nhietdo"></pre><br>
+	<button type="button" onclick="bai1()">kiểm tra</button>
+	<p id="kq"></p>
+	<h3>bài 3: diện tích hình vuông cạnh a.</h3>
+	<pre><label for="canha">nhập cạnh a: </label><input type="text" id="canha"></pre><br>
+	<button type="button" onclick="bai3()">kiểm tra</button>
+	<p id="kq3"></p>
+	<h3>bài 4: tính diện tích hình chữ nhật.</h3>
+	<pre><label for="a">nhập cạnh a: </label><input type="text" id="a">m  <label for="b">nhập cạnh b: </label><input type="text" id="b">m</pre><br>
+	<button type="button" onclick="bai4()">kiểm tra</button>
+	<p id="kq4"></p>
+</body>
+	<script>
+		function bai1(){
+			let C=parseFloat(document.getElementById('nhietdo').value);
+			let F=C*(9/5)+32;
+			document.getElementById('kq').innerText="bây giờ là: "+F+" độ F";
+		}
+		function bai3(){
+			let A=parseFloat(document.getElementById('canha').value);
+			let dientich=A*A;
+			document.getElementById('kq3').innerText="diện thích hình vuông là: "+dientich+" m2";
+		}
+		function bai4(){
+			let A=parseFloat(document.getElementById('a').value);
+			let B=parseFloat(document.getElementById('b').value);
+			let dientich=A*B;
+			document.getElementById('kq4').innerText="diện thích hình chữ nhật là: "+dientich+" m2";
+		}
+	</script>
+</html>

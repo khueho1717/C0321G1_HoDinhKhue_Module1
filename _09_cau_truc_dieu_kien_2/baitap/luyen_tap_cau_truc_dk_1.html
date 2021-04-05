@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	//bài 1
+	<h3>bài 1: nhập số và kiểm tra.</h3>
+	<pre><label for="a">nhập a: </label><input type="text" id="a">  <label for="b">nhập b: </label><input type="text" id="b"></pre><br>
+	<button type="button" onclick="bai1()">kiểm tra</button>
+	<p id="kq"></p>
+	//bài 2
+	<h3>bài 2: nhập tuổi và in ra kết quả</h3>
+	<pre><label for="tuoi">học sinh đủ điều kiện học lớp 10: </label><input type="text" id="tuoi"> tuổi</pre>
+	<button type="button" onclick="bai2()">kiểm tra</button><br>
+	<p id="kq2"></p>
+	//bài 3
+	<h3>bài 3: kiểm tra số nguyên</h3>
+	<pre><label for="ktrso">kiểm tra só nguyên: </label><input type="text" id="ktrso"></pre>
+	<button type="button" onclick="bai3()">kiểm tra</button><br>
+	<p id="kq3"></p>
+	//bài 4
+	<h3>bài 4: kiểm ta số lớn nhất.</h3>
+	<pre><label for="a2">nhập a: </label><input type="text" id="a2">  <label for="b2">nhập b: </label><input type="text" id="b2"> <label for="c2">nhập c: </label><input type="text" id="c2"></pre><br>
+	<button type="button" onclick="bai4()">kiểm tra</button>
+	<p id="kq4"></p>
+	//bài 5
+	<h3>bài 5: xét học lực.</h3>
+	<pre><label for="diemktr">điểm bài kiểm tra </label><input type="text" id="diemktr">  <label for="diemgk">điểm giữa kỳ </label><input type="text" id="diemgk"> <label for="diemck">nhập c: </label><input type="text" id="diemck"></pre><br>
+	<button type="button" onclick="bai5()">kiểm tra</button>
+	<p id="kq5"></p>
+	//bài 6
+	<h3>bài 6: hoa hồng bán hàng</h3>
+	<pre><label for="hoahong">doanh số bán hàng trong tháng: </label><input type="text" id="hoahong">VND</pre>
+	<button type="button" onclick="bai6()">hoa hồng nhận được</button><br>
+	<p id="kq6"></p>
+	//bài 7
+	<h3>bài 7: tính cước điện thoại</h3>
+	<pre><label for="phutgoi">số phút đãn gọi: </label><input type="text" id="phutgoi">Phút</pre>
+	<button type="button" onclick="bai7()">tiền cước gọi</button><br>
+	<p id="kq7"></p>
+	<script>
+		function bai1(){
+			let A=parseInt(document.getElementById('a').value); 
+			let B=parseInt(document.getElementById('b').value);
+			let kt=A%B;
+			if (kt==0) {
+				document.getElementById('kq').innerText="a chia hết cho b";
+			}else{
+				document.getElementById('kq').innerText="a không chia hết cho b";
+			}
+		}
+		function bai2(){
+			let Tuoi=parseInt(document.getElementById('tuoi').value);
+			if (Tuoi>15) {
+				document.getElementById('kq2').innerText="bạn đã đủ tuổi học lớp 10";
+			}else{
+				document.getElementById('kq2').innerText="bạn chưa đủ tuổi để học lớp 10";
+			}
+		}
+		function bai3(){
+			let kt3=parseInt(document.getElementById('ktrso').value);
+			if (kt3>0) {
+				document.getElementById('kq3').innerText="đây là số dương";
+			}else{
+				document.getElementById('kq3').innerText="đây là số âm";
+			}
+		}
+		function bai4(){
+			let a2=parseInt(document.getElementById('a2').value);
+			let b2=parseInt(document.getElementById('b2').value);
+			let c2=parseInt(document.getElementById('c2').value);
+			if (a2>b2) {
+				if (a2>c2) {
+					document.getElementById('kq4').innerText="a lớn nhất";
+				}else{
+					document.getElementById('kq4').innerText="c lớn nhất";
+				}
+			}else{
+				if (b2>c2) {
+					document.getElementById('kq4').innerText="b lớn nhất";
+				}else{
+					document.getElementById('kq4').innerText="c lớn nhất";
+				}
+			}
+		}
+		function bai5(){
+			let diemktr=parseFloat(document.getElementById('diemktr').value);
+			let diemgk=parseFloat(document.getElementById('diemgk').value);
+			let diemck=parseFloat(document.getElementById('diemck').value);
+			let dtb=(diemktr+diemgk*2+diemck*3)/6;
+			if (dtb>=6.5) {
+				if (dtb>=8) {
+					document.getElementById('kq5').innerText="bạn đạt loại giỏi";
+				}else{
+					document.getElementById('kq5').innerText="bạn thuộc loại khá";
+				}
+			}else{
+				if (dtb>=3.5) {
+					document.getElementById('kq5').innerText='bạn thuộc loại trung bình';
+				}else{
+					document.getElementById('kq5').innerText="bạn thuộc loại yếu";
+				}
+			}
+		}
+		function bai6(){
+			let doanhso=parseInt(document.getElementById('hoahong').value);
+			if (doanhso>=50000000) {
+				if (doanhso>=100000000) {
+					let hh=doanhso*0.3;
+					document.getElementById('kq6').innerText="hoa hồng nhận được trong tháng là: "+hh+" VND";
+				}else{
+					let hh=doanhso*0.25;
+					document.getElementById('kq6').innerText="hoa hồng nhận được trong tháng là: "+hh+" VND";
+				}
+			}else{
+				if (doanhso>=25000000) {
+					let hh=doanhso*0.2;
+					document.getElementById('kq6').innerText="hoa hồng nhận được trong tháng là: "+hh+" VND";
+				}else{
+					let hh=doanhso*0.1;
+					document.getElementById('kq6').innerText="hoa hồng nhận được trong tháng là: "+hh+" VND";
+				}
+			}
+		}
+		function bai7(){
+			let dagoi=parseFloat(document.getElementById('phutgoi').value);
+			if (dagoi>5) {
+				tiencuoc=dagoi*2500;
+				document.getElementById('kq7').innerText="tiền cước là: "+tiencuoc+"VND";
+			}else{
+				tiencuoc=dagoi*3000;
+				document.getElementById('kq7').innerText="tiền cước là: "+tiencuoc+"VND";
+			}
+		}
+	</script>
+</body>
+</html>

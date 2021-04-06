@@ -8,6 +8,10 @@
 	<pre><label for="nhietdo">nhập đô C: </label><input type="text" id="nhietdo"></pre><br>
 	<button type="button" onclick="bai1()">kiểm tra</button>
 	<p id="kq"></p>
+	<h3>bài 2: đổi m sang feet.</h3>
+	<pre><label for="met">nhập mét: </label><input type="text" id="met"></pre><br>
+	<button type="button" onclick="bai2()">kiểm tra</button>
+	<p id="kq2"></p>
 	<h3>bài 3: diện tích hình vuông cạnh a.</h3>
 	<pre><label for="canha">nhập cạnh a: </label><input type="text" id="canha"></pre><br>
 	<button type="button" onclick="bai3()">kiểm tra</button>
@@ -16,12 +20,51 @@
 	<pre><label for="a">nhập cạnh a: </label><input type="text" id="a">m  <label for="b">nhập cạnh b: </label><input type="text" id="b">m</pre><br>
 	<button type="button" onclick="bai4()">kiểm tra</button>
 	<p id="kq4"></p>
+	<h3>bài 5: tính diện tích tam giác vuông.</h3>
+	<pre><label for="a5">nhập cạnh a: </label><input type="text" id="a5">m  <label for="b5">nhập cạnh b: </label><input type="text" id="b5">m</pre><br>
+	<button type="button" onclick="bai5()">kiểm tra</button>
+	<p id="kq5"></p>
+	<h3>bài 6: giải phương trình bậc 1: ax+b=0.</h3>
+	<pre><label for="a6">nhập a: </label><input type="text" id="a6">  <label for="b6">nhập b: </label><input type="text" id="b6"></pre><br>
+	<button type="button" onclick="bai6()">kiểm tra</button>
+	<p id="kq6"></p>
+	<h3>bài 7: giải phương trình bậc 2: ax2+bx+c=0.</h3>
+	<pre><label for="a7">nhập a: </label><input type="text" id="a7">  <label for="b7">nhập b: </label><input type="text" id="b7"> <label for="c7">nhập c: </label><input type="text" id="c7"></pre><br>
+	<button type="button" onclick="bai7()">kiểm tra</button>
+	<p id="kq7"></p>
+	<h3>bài 8: kiểm tra tuổi.</h3>
+	<pre><label for="tuoi">nhập tuổi để kiểm tra: </label><input type="text" id="tuoi"></pre><br>
+	<button type="button" onclick="bai8()">kiểm tra</button>
+	<p id="kq8"></p>
+	<h3>bài 9: kiểm tra ba cạnh của tam giác</h3>
+	<pre><label for="a9">nhập cạnh a: </label><input type="text" id="a9">  <label for="b9">nhập cạnh b: </label><input type="text" id="b9"> <label for="c9">nhập c: </label><input type="text" id="c9"></pre><br>
+	<button type="button" onclick="bai9()">kiểm tra</button>
+	<p id="kq9"></p>
+	<h3>bài 10: tính giá điện sinh hoạt theo cấp bậc</h3>
+	<pre><label for="a10">nhập công suất tiêu thụ điện trong tháng </label><input type="text" id="a10">kWh</pre><br>
+	<button type="button" onclick="bai10()">kiểm tra</button>
+	<p id="kq10"></p>
+      
+	<h3>bài 11: tính thuế thu nhập cá nhân</h3>
+	<pre><label for="a11">tiềnt thuế thu nhập 1 tháng </label><input type="text" id="a11">VND</pre><br>
+	<button type="button" onclick="bai11()">tính</button>
+	<p id="kq11"></p>
+	<h3>bài 12: tính tiền gốc lẫn lãi theo thời gian với lãi suất 11%.</h3>
+	<pre><label for="a12">số tiền vay: </label><input type="text" id="a12">VND  <label for="b12">thời hạn: </label><input type="text" id="b12">Năm</pre><br>
+	<button type="button" onclick="bai12()">kiểm tra</button>
+	<p id="kq12"></p>
+
 </body>
 	<script>
 		function bai1(){
 			let C=parseFloat(document.getElementById('nhietdo').value);
 			let F=C*(9/5)+32;
 			document.getElementById('kq').innerText="bây giờ là: "+F+" độ F";
+		}
+		function bai2(){
+			let M=parseFloat(document.getElementById('met').value);
+			let feet=M*3.2808;
+			document.getElementById('kq2').innerText=" thành: "+feet+" feet";
 		}
 		function bai3(){
 			let A=parseFloat(document.getElementById('canha').value);
@@ -34,5 +77,116 @@
 			let dientich=A*B;
 			document.getElementById('kq4').innerText="diện thích hình chữ nhật là: "+dientich+" m2";
 		}
+		function bai5(){
+			let A5=parseFloat(document.getElementById('a5').value);
+			let B5=parseFloat(document.getElementById('b5').value);
+			let dientich=A5*B5;
+			document.getElementById('kq5').innerText="diện thích hình tam giác là: "+dientich+" m2";
+		}
+		function bai6(){
+			let A6=parseFloat(document.getElementById('a6').value);
+			let B6=parseFloat(document.getElementById('b6').value);
+			if (A6!=0) {
+				let x=(-B6)/A6;
+				document.getElementById('kq6').innerText="x bằng: "+x;
+			}else{
+				if (B6=0) {
+					document.getElementById('kq6').innerText="phương trình vô số nghiệm";
+				}else{
+					document.getElementById('kq6').innerText="phương trình vô nghiệm";
+				}
+			}
+		}
+		function bai7(){
+			let A7=parseFloat(document.getElementById('a7').value);
+			let B7=parseFloat(document.getElementById('b7').value);
+			let C7=parseFloat(document.getElementById('c7').value);
+			let D=(B7*B7)-(4*A7*C7);
+			//let D2=Math.round(Math.sqrt(D));
+			if (A7=0) {
+				document.getElementById('kq7').innerText="phương trình vô nghĩa";
+			}
+			if (D<0) {
+				document.getElementById('kq7').innerText="phương trình vô nghiệm";
+			}else if (D>0) {
+				X1=Math.round((-B7+Math.sqrt(D))/(2*A7));
+				X2=Math.round((-B7-Math.sqrt(D))/(2*A7));
+				document.getElementById('kq7').innerText="X1: "+X1+" X2: "+X2;
+			}else{
+				X=Math.round(-B7/(2*A7));
+				document.getElementById('kq7').innerText="phương trình có nghiệm kép X1=X2: "+X;
+			}
+		}
+		function bai8(){
+			let Tuoi=parseInt(document.getElementById('tuoi').value);
+			if (Tuoi>120||Tuoi<0) {
+				document.getElementById('kq8').innerText="bạn không phải là người";
+			}else{
+				document.getElementById('kq8').innerText="bạn là một người thực thụ người";
+			}
+		}
+			function bai9(){
+				let A9=parseFloat(document.getElementById('a9').value);
+				let B9=parseFloat(document.getElementById('b9').value);
+				let C9=parseFloat(document.getElementById('c9').value);
+				if (A9&&B9&&C9>0) {
+					if (A9+B9>C9) {
+						if (B9+C9>A9) {
+							if (A9+C9>B9) {
+								document.getElementById('kq9').innerText="đây là các cạnh của tam giác";
+							}else{
+								document.getElementById('kq9').innerText="đây không phải là cạnh của tam giác";
+							}
+						}else{
+							document.getElementById('kq9').innerText="đây không phải là cạnh của tam giác";
+						}
+					}else{
+						document.getElementById('kq9').innerText="đây không phải là cạnh của tam giác";
+					}
+				}else{
+					document.getElementById('kq9').innerText="đây không phải là cạnh của tam giác";
+				}
+			}
+			function bai10(){
+				let W=parseFloat(document.getElementById('a10').value);
+				if (W<50) {
+					document.getElementById('kq10').innerText="số tiền phải trả là: "+W*1549+" VND";
+				}else if (W<100) {
+					document.getElementById('kq10').innerText="số tiền phải trả là: "+W*1600+" VND";
+				}else if (W<200) {
+					document.getElementById('kq10').innerText="số tiền phải trả là: "+W*1858+" VND";
+				}else if (W<300) {
+					document.getElementById('kq10').innerText="số tiền phải trả là: "+W*2340+" VND";
+				}else if (W<400) {
+					document.getElementById('kq10').innerText="số tiền phải trả là: "+W*2615+" VND";
+				}else{
+					document.getElementById('kq10').innerText="số tiền phải trả là: "+W*2701+" VND";
+				}
+			}
+			function bai11(){
+				let thunhap=parseInt(document.getElementById('a11').value);
+				if (thunhap<5000000) {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.05+" VND";
+				}else if (thunhap<10000000) {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.1+" VND";
+				}else if (thunhap<18000000) {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.15+" VND";
+				}else if (thunhap<32000000) {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.2+" VND";
+				}else if (thunhap<52000000) {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.25+" VND";
+				}else if (thunhap<80000000) {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.3+" VND";
+				}else {
+					document.getElementById('kq11').innerText="Tiền thuế phải nộp: "+thunhap*0.35+" VND";
+				}
+
+			}
+			function bai12(){
+				let A12=parseFloat(document.getElementById('a12').value);
+				let B12=parseFloat(document.getElementById('b12').value);
+				let tienlaikep=A12*Math.pow(1+0.11,B12);
+				document.getElementById('kq12').innerText="tiền phải trả là:  "+tienlaikep+" VND";
+			}
 	</script>
 </html>

@@ -185,8 +185,22 @@
 			function bai12(){
 				let A12=parseFloat(document.getElementById('a12').value);
 				let B12=parseFloat(document.getElementById('b12').value);
-				let tienlaikep=A12*Math.pow(1+0.11,B12);
+				if (A12<10000000) {
+				let tienlaikep=A12*Math.pow(1+0.13,B12);
 				document.getElementById('kq12').innerText="tiền phải trả là:  "+tienlaikep+" VND";
+				}else if (A12<50000000) {
+					let tienlaikep=A12*Math.pow(1+0.11,B12);
+				document.getElementById('kq12').innerText="tiền phải trả là:  "+tienlaikep+" VND";
+				}else if (A12<100000000) {
+					let tienlaikep=A12*Math.pow(1+0.1,B12);
+				document.getElementById('kq12').innerText="tiền phải trả là:  "+tienlaikep+" VND";
+				}else if (A12<300000000) {
+					let tienlaikep=A12*Math.pow(1+0.09,B12);
+				document.getElementById('kq12').innerText="tiền phải trả là:  "+tienlaikep+" VND";
+				}else{
+					let tienlaikep=A12*Math.pow(1+0.08,B12);
+				document.getElementById('kq12').innerText="tiền phải trả là:  "+tienlaikep+" VND";
+				}
 			}
 	</script>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<label for="game">Chơi game đoán số </label><button id="game" type="button" onclick="doanso()">play</button>
+	<script>
+		function doanso(){
+			let a=parseInt(prompt("nhập khoảng số cần đoán"));
+			let b=parseInt(prompt("nhập khoảng số cần đoán"));
+			let c=parseInt(prompt("số bạn đoán là bao nhiêu"));
+			let d=Math.floor(Math.random() * (b-a)) + a;
+			do{
+				if (d==c) {
+					alert("bạn đoán đúng");
+					break;
+				}else{
+					alert('bạn đoán sai mời bạn chọn lại');
+					c;
+					d;	
+				}
+				c++;
+			}while(c==a && c<=b);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vay=parseInt(prompt("Nhập số tiền vay"));
+    let tg=parseInt(prompt("thời gian vay (tháng)"));
+    let lai=parseInt(prompt("lãi suất phai trả"))/100;
+    for(i=1;i<=tg;i++){
+        vay=vay*(1+lai);
+    }
+    alert("số tiền phải trả sau"+tg+" là "+vay+" VND");
+</script>
+</body>
+</html>

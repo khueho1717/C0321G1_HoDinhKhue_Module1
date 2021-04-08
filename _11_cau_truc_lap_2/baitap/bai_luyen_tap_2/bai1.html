@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let count=0;
+		let x=1;
+		let y=0;
+		let total;
+		for(;count>=0;count++){
+			total=x+y;
+			x=y;
+			y=total;
+			document.write(total+" ");
+			if (count>200) {
+				break;
+			}
+		}
+	</script>
+</body>
+</html>

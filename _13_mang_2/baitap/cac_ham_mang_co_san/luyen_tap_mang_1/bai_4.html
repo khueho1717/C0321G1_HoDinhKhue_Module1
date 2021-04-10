@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button"onclick="dao()">đảo mảng</button>
+    <p id="kq"></p>
+    <script>
+        let n=[2,34,964,111,2,76,814,33,25,15,3,6];
+        document.getElementById('kq').innerText=n;
+       function dao() {
+            n.reverse();
+            document.getElementById('kq').innerText=n;
+       }
+    </script>
+</body>
+</html>

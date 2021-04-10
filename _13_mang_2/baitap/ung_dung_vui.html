@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="text-align: center" id="nhap">
+    <h3>Tyle Anthing slowly</h3>
+    <textarea cols="40" rows="15" id="txt" onkeydown="game()"></textarea>
+    <script>
+        function game() {
+            let input = ['B', 'Ạ', 'N', ' ', 'L', 'À', ' ', 'M', 'Ộ', 'T', ' ', 'N', 'G', 'Ư', 'Ờ', 'I', ' ', 'T', 'U', 'Y', 'Ệ', 'T', ' ', 'V', 'Ờ', 'I'];
+            let kq = document.getElementById('txt').value;
+            let b = kq.length;
+            let n = "";
+            if (b > 0) {
+                for (let i = 0; i < b; i++) {
+                    n = n + input[i];
+                    kq= n;
+                    if (i == input.length) {
+                        kq = "";
+                        n = "";
+
+                    }
+                }
+            }
+            document.getElementById('txt').value = n;
+            n="";
+            setTimeout(n;1);
+        }
+    </script>
+</form>
+</body>
+</html>

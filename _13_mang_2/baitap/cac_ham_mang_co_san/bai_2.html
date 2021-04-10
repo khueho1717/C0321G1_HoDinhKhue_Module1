@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input=prompt();
+    let string=input.toString();
+    let x=[string[0]];
+    for(let i=1;i<string.length;i++){
+        if(string[i-1]%2===0&&string[i]%2===0){
+            x.push('-',string[i]);
+        }else {
+            x.push(string[i]);
+        }
+    }
+    console.log(x.join(''));
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr=[2,5,46,33,12,43,22,16,2,9,8,5,21,22,5,6,67];
+        let check=prompt('kiểm tra số có trong dãy số');
+        let count=0;
+        for(let i=0;i<arr.length;i++) {
+            if (arr[i] == check) {
+                // alert("số này nằm trong dãy số");
+                arr.splice(i, 1);
+                arr.push(0);
+                alert(arr);
+                break;
+            }else{
+                count=count+1;
+            }
+            if (count==arr.length){
+                alert('số này không nằm trong dãy');
+            }
+        }
+
+    </script>
+</body>
+</html>

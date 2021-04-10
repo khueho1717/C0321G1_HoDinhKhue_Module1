@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>kiểm tra mảng và sắp xếp</h1>
+<p>Click vào button để kiểm tra.</p>
+
+<button onclick="myFunction()">Run</button>
+
+<p id="demo"></p>
+
+<script>
+    var subject = [4, 144, 25, 16,55,2,76,32,11,9];
+    document.getElementById("demo").innerHTML = subject;
+    function compare(b, a){
+        return a-b;
+    }
+    function myFunction() {
+        subject.sort(compare);
+        document.getElementById("demo").innerHTML = subject;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="eng">nhập màu cần dịch </label><input type="text"placeholder="english" id="eng">
+    <button type="button" onclick="dich()">dich</button><br>
+    <h3>nghiã là </h3>
+    <p id="vie"></p>
+</form>
+<script>
+    function dich() {
+        let tudien = document.getElementById('eng').value;
+        let vietsub = ['đỏ', 'vàng', 'xanh lá', 'xanh dương', 'cam', 'hồng'];
+        let color = ['red', 'yellow', 'green', 'blue', 'oranges', 'pink'];
+        for (let i = 0; i < color.length; i++) {
+            if (tudien == color[i]) {
+                var n = color.indexOf(tudien);
+                document.getElementById('vie').innerText = vietsub[n];
+            }
+        }
+    }
+</script>
+</body>
+</html>

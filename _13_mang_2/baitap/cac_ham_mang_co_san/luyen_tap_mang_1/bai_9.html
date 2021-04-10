@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>nối hai mảng</h1>
+<p>Click vào button để kiểm tra.</p>
+
+<button onclick="myFunction()">Run</button>
+
+<p id="a"></p>
+<p id="b"></p>
+<p id="c"></p>
+
+<script>
+    var a = [4, 144, 25, 16];
+    document.getElementById("a").innerHTML = a;
+    var b = [3, 4, 65, 16,9,44,23];
+    document.getElementById("b").innerHTML = b;
+    var c = a.concat(b);
+    c=c.join('-')
+
+    function myFunction() {
+        document.getElementById("c").innerHTML = c;
+    }
+</script>
+</body>
+</html>

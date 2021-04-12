@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str=prompt("nhập vào một chuỗi để đếm số từ:");
+    let count=1;
+    for (let i=0;i<str.length;i++){
+        if (str[i]==" "&&str[i+1]!=" "){
+            count++;
+        }
+    }
+    alert("số từ bạn đã nhập vào là: "+count);
+</script>
+</body>
+</html>

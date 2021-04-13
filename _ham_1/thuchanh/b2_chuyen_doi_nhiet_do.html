@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <p>
+        <label>độ F</label>
+        <input id="dof" type="number"placeholder="nhập độ f"oninput="chuyendoi(this.value)"onchange="chuyendoi(this.value)">
+        </p>
+        <p>độ C: <span id="doc"></span></p>
+
+    </form>
+<script>
+    function chuyendoi(d) {
+        d=parseFloat(d);
+        document.getElementById('doc').innerHTML=(d-32)/1.8;
+    }
+</script>
+</body>
+</html>

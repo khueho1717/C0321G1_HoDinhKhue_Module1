@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function foundmin(x) {
+        let min=x[0];
+    for (let i=0;i<x.length;i++){
+        if (min>x[i]){
+            min=x[i];
+        }
+    }
+    return min;
+    }
+    let arr1=[1,4,3,-5,3,6];
+    let min=foundmin(arr1);
+    alert(min);
+    let arr2=[7, 12, 6, 9, 20, 56, 89]
+    alert(min=foundmin(arr2));
+    let arr3=[]
+    alert(min=foundmin(arr3));
+    let arr4=[0, 0, 0, 0, 0, 0];
+    alert(min=foundmin(arr4));
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>bài 1: hàm tính số bình phương</h3>
+    <button type="button" onclick="bai1(parseInt(prompt('nhập số cần tính bình phương')))">kết quả</button>
+    <h3>bài 2: hàm tính diện tích và chu vi hnhd tròn</h3>
+    <button type="button" onclick="bai2_1(parseInt(prompt('nhập đường kính hình tròn đv(mét):')))">tính chu vi</button>
+    <button type="button" onclick="bai2_2(parseInt(prompt('nhập đường kính hình tròn đv(mét):')))">tính diện tích</button>
+    <h3>bài 3: tính giai thừa của một số</h3>
+    <button type="button" onclick="bai3(prompt('nhập số cần tính giai thừa'))">kiểm tra</button>
+    <h3>bài 4: kiểm tra đây có phải là một số</h3>
+    <button type="button" onclick="bai4(parseInt(prompt('nhập hãy nhập gì đó')))">kiểm tra</button>
+    <h3>bài 5: tìm só nguyên nhỏ nhất trong 3 số</h3>
+    <button type="button" onclick="bai5()">kiểm tra</button>
+    <h3>bài 6: kiểm tra số nguyên dương</h3>
+    <button type="button" onclick="bai6()">kiểm tra</button>
+    <h3>bài 7: chuyển đổi vị trí của hai số nguyên</h3>
+    <button type="button" onclick="bai7()">đổi vị trí</button>
+    <h3>bài 8: thêm phần tử và đảo mảng</h3>
+    <button type="button" onclick="bai8()">đổi vị trí</button>
+    <h3>bài 9: kiểm tra kí tự</h3>
+    <button type="button" onclick="bai9()">đổi vị trí</button>
+<script>
+    function bai1(x) {
+        let result=x*x;
+        alert(result);
+    }
+    function bai2_1(r) {
+        let cv=2*r*3.14;
+        alert("chu vi hình tròn là: "+cv+" m");
+    }
+    function bai2_2(r) {
+        let dt=r*r*3.14;
+        alert("diện tích hình tròn là: "+dt+" m2");
+    }
+    function bai3(n) {
+        let gt=1;
+        for (i=1;i<=n;i++){
+            gt *=i;
+        }
+        alert("giai thừa của "+n+" là: "+gt);
+    }
+    function bai4(x) {
+        if (Number.isNaN(x)){
+            alert(false);
+        }else {
+            alert(true);
+        }
+    }
+    function bai5() {
+        let arr=Array(3);
+        for (let i=0;i<3;i++){
+            arr[i]=parseInt(prompt('nhập số'));
+        }
+        let min=arr[0];
+        for (let i=1;i<arr.length-1;i++){
+            if (min>arr[i]){
+                min=arr[i];
+            }
+        }
+        alert("số nhỏ nhất trong mảng là: "+min);
+    }
+    function bai6() {
+        let n=parseInt(prompt("nhập và số và kiểm trả số đố có phải là số nguyên dương không"));
+        if (n>=0){
+            alert(true);
+        }else {
+            alert(false);
+        }
+    }
+    function bai7() {
+        let arr=new Array(2);
+        for (let i=0;i<=1;i++){
+            arr[i]=prompt(" nhập số vào");
+        }
+        alert(arr);
+        arr.reverse();
+        alert("mảng đảo là: "+arr);
+    }
+    function bai8(x) {
+        let arr=[2,5,4,6,33,7,13,42,34,65,71,9,6];
+        alert("mảng chưa đảo: "+arr);
+        let add=prompt("nhập số cần thêm vào mảng");
+        let adress=prompt("nhập vị trí cần thêm trong mảng");
+        if (adress>arr.length){
+            alert("vị trí này không có trong; mảng")
+        }else {
+            arr.splice(adress,0,add);
+            arr.reverse();
+            alert("mảng đảo "+arr);
+        }
+    }
+    function bai9() {
+        let a=prompt("hãy nhập vào một chuỗi kí tự ");
+        let b=a.split('');
+        //alert(b)
+        let c=prompt("nhập ký tụ để xem có trong mảng không");
+        let count=0;
+        for (let i=0;i<b.length;i++){
+            if (c==b[i]){
+                count++;
+            }
+        }
+        if (count>0){
+            alert("số lần xuất hiện của kí tự này trong mảng là: "+count);
+        }else {
+            alert("-1");
+        }
+    }
+</script>
+</body>
+</html>

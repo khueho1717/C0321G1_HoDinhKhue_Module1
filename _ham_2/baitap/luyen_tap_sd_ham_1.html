@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài 1: hiển thị lời chào</h3>
+<button type="button" id="mess" onclick="loiChao('chào mọi người')">show</button>
+<br>
+<h3>Bài 2: tăng giá trị đối số</h3>
+<button type="button" id="bai2" onclick="bai2(prompt('nhập vào số nào đó'))">show</button>
+<br>
+<h3>Bài 3: hàm nhận hai tham số</h3>
+<button type="button" id="bai3" onclick="bai3(parseInt(prompt('nhập vào số a')),parseInt(prompt('nhập vào số b')))">kiểm
+    tra tổng
+</button>
+<br>
+<h3>Bài 4: thêm hàm alert()</h3>
+<button type="button" id="bai4" onclick="bai4(),bai4_2()">show</button>
+<br>
+<h3>Bài 5: tìm tên các vì sao và chòm sao</h3>
+<button type="button" id="bai5" onclick="bai5()">show</button>
+<br>
+<script>
+    function loiChao(x) {
+        alert(x);
+    }
+
+    function bai2(a) {
+        a++;
+        alert("số thay đổi là: " + a);
+    }
+
+    function bai3(a, b) {
+        let sum = a + b;
+        if (a > b) {
+            alert("số a lớn hơn số b và có tổng hai số là " + sum);
+        } else {
+            alert("số a nhỏ hơn hoặc bằng số b và có tông hai số là " + sum);
+        }
+    }
+
+    function bai4() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+
+    function bai4_2() {
+        result = 0;
+        alert('đây là result trước khi thực hiện hàm là: ' + result);
+        let result2 = bai4();
+        alert('đây là result sau khi thục hiện hàm: ' + result2);
+    }
+
+    function bai5() {
+        let start = ['polaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe', 'egulus'];
+        let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let str = prompt('hãy nhập tên một vì sao và tôi cho biết nó thuộc chòm sao nào!!');
+        let dem = 0;
+        for (let i = 0; i < start.length; i++) {
+            if (start[i] == str) {
+                alert("sao " + start[i] + " thuộc chòm sao " + constellation[i]);
+                dem++;
+                break;
+            }
+        }
+        if (dem == 0) {
+            alert("không tìm thấy ngôi sao này");
+        }
+    }
+
+</script>
+</body>
+</html>

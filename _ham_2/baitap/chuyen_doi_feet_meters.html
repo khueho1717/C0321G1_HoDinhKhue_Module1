@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    select=confirm("bạn bấm OK để chuyển feet sang meeters và CANCEL để chuyển ngược lại");
+    if (select){
+        f=prompt("mời bạn nhập số feet");
+        let kq=feet(f)
+    }else {
+        m=prompt("mời bạn nhập số meeters");
+        let kq=meeter(m);
+    }
+    function feet(x) {
+        let changeF=x*0.305;
+        alert(changeF+ " mét");
+    }
+    function meeter(x) {
+        let changeC=x*3.279;
+        alert(changeC+" bước");
+    }
+</script>
+</body>
+</html>

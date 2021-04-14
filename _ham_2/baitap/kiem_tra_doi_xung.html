@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str=prompt("nhập và kiểm ra chuỗi đối xứng: ");
+    function kiemTraDoiXung(str) {
+        let first = 0;
+        let last = str.length - 1;
+        if (first >= last) {
+            return true;
+        } else if (str[first] != str[last]) {
+            return false;
+        } else {
+            str = str.slice(1, str.length - 1);
+            return kiemTraDoiXung(str);
+        }
+    }
+    let kq=kiemTraDoiXung(str);
+    if (kq){
+        alert("đây là chuỗi đối xứng");
+    }else {
+        alert("đây là chuỗi không đối xứng");
+    }
+
+</script>
+</body>
+</html>

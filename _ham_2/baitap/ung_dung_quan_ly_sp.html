@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><h3>Add New Product</h3></td>
+        </tr>
+        <tr >
+            <td ><input id="insert" type="text"  ></td>
+            <td><button type="button" onclick="add(),showProduct()">Add</button></td>
+        </tr>
+    </table>
+    <p id="show"></p>
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td colspan="4">Display All Product</td>-->
+<!--            <td>product</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td height="20px" colspan="5"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td width="150px"></td>-->
+<!--            <td width="50px"><button type="button">Edit</button></td>-->
+<!--            <td width="60px"></td>-->
+<!--            <td width="60px"><button type="button">Delete</button></td>-->
+<!--            <td width="60px"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<script>
+    let product= new Array();
+    function add() {
+        let them=document.getElementById("insert").value;
+        product.push(them);
+        document.getElementById("insert").value="";
+    }
+    function showProduct() {
+        let bang="<table>";
+        for (let i=0;i<product.length;i++){
+            bang+="<tr>";
+                bang+="<td>"+product[i]+"</td>";
+                bang+="<td>"+'<button type="button"onclick="edit('+i+')">Edit</button>'+"</td>";
+                bang+="<td>"+'<button type="button"onclick="xoa('+i+')">Delete</button>'+"</td>";
+            bang+="</tr>";
+        }
+        bang+="</table>";
+        document.getElementById("show").innerHTML=bang;
+    }
+    function edit(x) {
+       let a=prompt("sửa giá trị");
+       product[x]=a;
+       showProduct();
+    }
+    function xoa(y) {
+        product.splice(y,1);
+        showProduct();
+    }
+</script>
+</body>
+</html>

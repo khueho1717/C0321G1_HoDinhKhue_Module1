@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Rectangle=function (x,y) {
+        this.dai=x;
+        this.rong=y;
+        this.getDai=function () {
+            return x;
+        };
+        this.getRong=function () {
+            return y;
+        };
+        this.dientich=function () {
+            return x*y;
+        }
+        this.chuvi=function () {
+            return (x+y)*2;
+        }
+        this.cavas={
+
+        }
+    }
+    let a=new Rectangle(parseInt(prompt("nhap chieu dai")),parseInt(prompt("nhap chieu rong")));
+    alert(a.dientich());
+</script>
+</body>
+</html>

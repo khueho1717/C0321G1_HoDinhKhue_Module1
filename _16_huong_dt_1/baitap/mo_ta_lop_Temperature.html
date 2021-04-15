@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ChangeTempareTurn{
+        constructor(x) {
+            this.doC=x;
+        }
+        getDoc(){
+            return this.doC;
+        }
+        changeF(){
+            return (this.doC*1.8)+32;
+        }
+        changeK(){
+            return this.doC+273.15;
+        }
+    }
+    let change=new ChangeTempareTurn(parseFloat(prompt("nhập độ C vào đây!!!")));
+    if (change.getDoc()<-273){
+        alert("nhiệt độ quá thấp");
+    }else {
+        alert("có giá trị là: "+change.changeF()+" độ F");
+        alert("có giá trị là: "+change.changeK()+" độ K");
+    }
+
+</script>
+</body>
+</html>

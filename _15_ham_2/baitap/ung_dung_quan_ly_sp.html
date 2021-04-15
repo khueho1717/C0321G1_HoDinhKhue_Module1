@@ -50,14 +50,13 @@
         document.getElementById("show").innerHTML=bang;
     }
     function edit(x) {
+        let save=product[x];
        let a=prompt("sửa giá trị");
        if (a!=""){
            product[x]=a;
            showProduct();
-       }else if (null){
-           alert("null")
-           // a=product[x];
-           // showProduct();
+       }else{
+           product[x]=save;
        }
        // product[x]=a;
        // showProduct();

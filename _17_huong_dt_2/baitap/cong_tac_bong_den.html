@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img is="lamp" src=""><br>
+<button type="button" onclick="electricLamp.electricLamp()">bật/tắt</button>
+<p id="status"></p>
+<script>
+    class SwitchButton{
+        constructor(_status) {
+            this.status=_status;
+            this.lamp=electricLamp;
+        }
+        switchButton(){
+           this.status= !this.status;
+        }
+        connectToLamp(electricLamp){
+            this.lamp=electricLamp;
+        }
+    }
+    class ElectricLamp{
+        constructor(_status) {
+            this.status=_status;
+        }
+        electricLamp(){
+            console.log("nhạn clich")
+                if (this.status){
+                    document.getElementById("lamp").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxB5PrwnrelnObllpR3-R87oS3aaYwNAlJLg&usqp=CAU";
+                    document.getElementById("status").innerText="bóng đèn đang bậc"
+                }else {
+                    document.getElementById("lamp").src="";
+                    document.getElementById("status").innerText="bóng đèn đang tắt"
+                }
+            }
+    }
+    let switchButton=new SwitchButton(true);
+    let  electricLamp=new ElectricLamp(switchButton.status);
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mouse {
+        constructor(_name, _weight, _speed, _status) {
+            this.name = _name;
+            this.weight = _weight;
+            this.speed = _speed;
+            this.status = _status;
+        }
+
+        soundMouse(message) {
+            console.log(message);
+        }
+    }
+
+    class Cat {
+        constructor(_name, _weight, _max_speed) {
+            this.name = _name;
+            this.weight = _weight;
+            this.speed = _max_speed;
+        }
+
+        soundCat(message) {
+            console.log(message);
+        }
+
+        eatMouse(mouse) {
+            if (mouse.status === "sống") {
+                this.weight += mouse.weight;
+            } else {
+                this.soundCat("hôi quá ăn không được");
+            }
+        }
+
+        catchMouse(mouse) {
+            if (this.speed > mouse.speed) {
+                if (mouse.status === "sống") {
+                    this.eatMouse(mouse);
+                    mouse.soundMouse("mouse: chết rồi")
+                    this.soundCat("cat say: ngon quá order thêm chuột");
+                } else {
+                    mouse.soundMouse("thối quá ăn không được");
+                }
+            }else {
+                mouse.soundMouse("chạy chậm quá")
+            }
+        }
+    }
+
+    let mouse = new Mouse("jerry",3,15,"sống");
+    let cat = new Cat("tom",10,20);
+    cat.catchMouse(mouse);
+</script>
+</body>
+</html>

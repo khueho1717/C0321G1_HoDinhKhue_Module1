@@ -5,39 +5,39 @@
     <title>Title</title>
 </head>
 <body>
-<img is="lamp" src=""><br>
-<button type="button" onclick="electricLamp.electricLamp()">bật/tắt</button>
-<p id="status"></p>
+
+<img id="hienThiHinh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxB5PrwnrelnObllpR3-R87oS3aaYwNAlJLg&usqp=CAU" width="300"height="300">
+<input type="button" id="congTat" value="Cong tat" onclick="congtat()">
+<p id="hienThi">den sang</p>
 <script>
     class SwitchButton{
-        constructor(_status) {
-            this.status=_status;
-            this.lamp=electricLamp;
+        constructor(status) {
+            this.status1=status;
         }
-        switchButton(){
-           this.status= !this.status;
-        }
-        connectToLamp(electricLamp){
-            this.lamp=electricLamp;
+        OnOff(){
+            this.status1= !this.status1;
         }
     }
     class ElectricLamp{
-        constructor(_status) {
-            this.status=_status;
+        constructor(status) {
+            this.status=status;
         }
-        electricLamp(){
-            console.log("nhạn clich")
-                if (this.status){
-                    document.getElementById("lamp").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxB5PrwnrelnObllpR3-R87oS3aaYwNAlJLg&usqp=CAU";
-                    document.getElementById("status").innerText="bóng đèn đang bậc"
-                }else {
-                    document.getElementById("lamp").src="";
-                    document.getElementById("status").innerText="bóng đèn đang tắt"
-                }
+        OnOffLamp(){
+            if (this.status.status1){
+                document.getElementById('hienThiHinh'). src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxB5PrwnrelnObllpR3-R87oS3aaYwNAlJLg&usqp=CAU";
+                document.getElementById('hienThi').innerHTML='den sang';
+            }else {
+                document.getElementById('hienThiHinh').src="https://png.pngtree.com/png-clipart/20190904/original/pngtree-earth-off-lights-for-1-hour-png-image_4479952.jpg";
+                document.getElementById('hienThi').innerHTML='den tat';
             }
+        }
     }
     let switchButton=new SwitchButton(true);
-    let  electricLamp=new ElectricLamp(switchButton.status);
+    let electricLamp=new ElectricLamp(switchButton);
+    function congtat(){
+        switchButton.OnOff();
+        electricLamp.OnOffLamp();
+    }
 </script>
 </body>
 </html>

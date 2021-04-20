@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ki tu</title>
+</head>
+<body>
+<script>
+    let str1=prompt('nhap vao chuoi bat ki');
+    let arr=[];
+    let dem=0;
+    for (let i = 0; i < str1.length; i++) {
+        if (arr.indexOf(str1[i])==-1){
+            arr.push(str1[i]);
+            dem++
+        }
+
+    }
+    alert('cac phan tu trong mang khong tinh ki tu giong nhau la: '+dem+'\n ' +
+        'phan tu trong mang la: '+str1+'\n mau sau khi thuc hien: '+arr);
+
+</script>
+</body>
+</html>

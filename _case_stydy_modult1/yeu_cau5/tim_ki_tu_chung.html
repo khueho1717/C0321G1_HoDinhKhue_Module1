@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputIndex=parseInt(prompt("nhập số phần tử trong mảng"));
+    let inputIndex2=parseInt(prompt("nhập số phần tử trong mảng"));
+    let arr=new Array(inputIndex);
+    let total=0;
+    for (let i=0;i<arr.length;i++){
+        arr[i]=new Array(inputIndex2);
+        for (let j=0;j<inputIndex2;j++){
+            arr[i][j]=parseInt(prompt("nhập phần tử con"));
+            if (arr[i][j]%2==0){
+                total+=arr[i][j];
+            }
+        }
+    }
+    alert("tỏng phần số chẳng trong ma trận"+total);
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>bài 1 tính thuế</h3>
+    <button type="button" onclick="income_tax()">click để tính thuế</button><br>
+    <h3>bài 2 kiểm tra kí tự nguyên âm trong tiếng anh </h3>
+    <button type="button" onclick="check_vowel()">kiểm tra nguyên âm</button><br>
+
+<script>
+    function income_tax(){
+        let income=parseFloat(prompt("nhập thu nhập hàng tháng ròng"));
+        if (income<7000000){
+            let tax=income*0.05;
+            alert("tiền thuế pải trả là: "+tax.toLocaleString()+" VND");
+        }else if (income<=15000000){
+            tax=income*0.1;
+            alert("tiền thuế pải trả là: "+tax.toLocaleString()+" VND");
+        }else if (income>15000000){
+            tax=income*0.2;
+            alert("tiền thuế pải trả là: "+tax.toLocaleString()+" VND");
+        }else {
+            alert("bạn không cần đóng thuế");
+        }
+    }
+    function check_vowel(){
+        let input=prompt("nhập vào kí tụ trong tiếng anh để kiểm tra đó có nằm trong bảng kí tự");
+        switch (input) {
+            case "o":
+                alert("đây là môt nguyên âm");
+                break;
+            case "u":
+                alert("đây là môt nguyên âm");
+                break;
+            case "i":
+                alert("đây là môt nguyên âm");
+                break;
+            case "a":
+                alert("đây là môt nguyên âm");
+                break;
+            case "e":
+                alert("đây là môt nguyên âm");
+                break;
+            case "O":
+                alert("đây là môt nguyên âm");
+                break;
+            case "U":
+                alert("đây là môt nguyên âm");
+                break;
+            case "I":
+                alert("đây là môt nguyên âm");
+                break;
+            case "A":
+                alert("đây là môt nguyên âm");
+                break;
+            case "E":
+                alert("đây là môt nguyên âm");
+                break;
+            default:
+                alert("kí tự này không phải là một nguyên âm");
+
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let gear=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín',];
+    let number=prompt("nhập dãy số in tra chữ");
+    number1=number.split('');
+    for (let i=0;i<number1.length;i++){
+            switch (number1[i]) {
+                case '1':
+                    console.log("đãn nhận giá trị 1");
+                    number1[i]=gear[1]
+                    break;
+                case '2':
+                    number1[i]=gear[2];
+                    break;
+                case '3':
+                    number1[i]=gear[3];
+                    break;
+                case '4':
+                    number1[i]=gear[4];
+                    break;
+                case '5':
+                    number1[i]=gear[5];
+                    break;
+                case '6':
+                    number1[i]=gear[6];
+                    break;
+                case '7':
+                    number1[i]=gear[7];
+                    break;
+                case '8':
+                    number1[i]=gear[8];
+                    break;
+                case '9':
+                    number1[i]=gear[9];
+                    break;
+                case '0':
+                    number1[i]=gear[0];
+                    break;
+            }
+    }
+    document.write(number1.join('-'));
+</script>
+</body>
+</html>

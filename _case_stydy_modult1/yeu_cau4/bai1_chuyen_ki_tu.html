@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("nhập một string").toLowerCase(); //abc  abc
+    let inputStr = input.split(" "); //["abc","","","abc"]
+    let output = "";
+
+    for (let i = 0; i < inputStr.length; i++) {
+        if (inputStr[i] == "") {
+            continue;
+        } else {
+            for (let j = 0; j < inputStr.length; j++) {
+                if (j == 0) {
+                    output += inputStr[i].charAt(j).toUpperCase();
+                } else {
+                    output += inputStr[i].charAt(j);
+                }
+            }
+        }
+        output += " ";
+    }
+    alert(output);
+</script>
+</body>
+</html>

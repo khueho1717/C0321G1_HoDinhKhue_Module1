@@ -6,35 +6,38 @@
 </head>
 <body>
 <script>
-    let inputIndex=parseInt(prompt("nhập số phần tử trong mảng"));
-    let inputIndex2=parseInt(prompt("nhập số phần tử trong mảng"));
-    let arr=new Array(inputIndex);
-    let total=0;
-    for (let i=0;i<arr.length;i++){
-        arr[i]=new Array(inputIndex2);
-        for (let j=0;j<inputIndex2;j++){
-            arr[i][j]=parseInt(prompt("nhập phần tử con"));
-            if (arr[i][j]%2==0){
-               
-                let count=0;
-                let N=2;
-                while (count<num) {
-                    let count2=0;
-                    for(let i=2;i<=Math.sqrt(N);i++){
-                        if (N%i===0) {
-                            count2++;
-                        }
+    let inputIndex = parseInt(prompt("nhập số phần tử trong mảng"));
+    let inputIndex2 = parseInt(prompt("nhập số phần tử trong mảng con"));
+    let arr = new Array(inputIndex);
+    let count = 0;
+    let demSNT = '';
+    for (let i = 0; i < inputIndex; i++) {
+        arr[i] = new Array(inputIndex2);
+        for (let j = 0; j < inputIndex2; j++) {
+            let check = true;
+            arr[i][j] = parseInt(prompt("nhập phần tử"));
+            if (arr[i][j] < 2) {
+                check = false;
+            } else {
+                for (let a = 2; a < arr[i][j]; a++) {
+                    if (arr[i][j] % a == 0) {
+                        check = false;
+                        break
                     }
-                    if (count2===0) {
-                        document.write(N+", ");
-                        count++;
-                    }
-                    N++;
-
                 }
+                if (check) {
+                    count++;
+                    demSNT += arr[i][j] + ' ';
+                }
+            }
+
+
         }
     }
-    alert("tỏng phần số chẳng trong ma trận"+total);
+
+    document.write("các số nguyên tố trong mảng là: " + demSNT +
+        '\n số lượng số nguyên tố có trong mảng là: ' + count);
+
 </script>
 </body>
 </html>

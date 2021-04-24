@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check=true;
+    do{
+        let choise=parseInt(prompt("gọi đồ uống\n"+"1.Cafe\n"+"2.Cam vắt\n"+"3.Nước ép cà rốt\n"+"4.Nước ép cà chua\n"+"5.Nước lọc\n"+"6.Nước dừa\n"+"7.Thoát"));
+        switch (choise) {
+            case 1:
+                alert("giá của đồ uống là: 15000 VND")
+                let amount1=parseInt(prompt("nhập số lượng"));
+                let payMent1=amount1*15000;
+                alert("số tiền thanh toán: "+payMent1);
+                break;
+            case 2:
+                alert("giá của đồ uống là: 17000 VND")
+                let amount2=parseInt(prompt("nhập số lượng"));
+                let payMent2=amount2*17000;
+                alert("số tiền thanh toán: "+payMent2);
+                break;
+            case 3:
+                alert("giá của đồ uống là: 20000 VND")
+                let amount3=parseInt(prompt("nhập số lượng"));
+                let payMent3=amount3*20000;
+                alert("số tiền thanh toán: "+payMent3);
+                break;
+            case 4:
+                alert("giá của đồ uống là: 15000 VND")
+                let amount4=parseInt(prompt("nhập số lượng"));
+                let payMent4=amount4*15000;
+                alert("số tiền thanh toán: "+payMent4);
+                break;
+            case 5:
+                alert("giá của đồ uống là: 15000 VND")
+                let amount5=parseInt(prompt("nhập số lượng"));
+                let payMent5=amount5*15000;
+                alert("số tiền thanh toán: "+payMent5);
+                break;
+            case 6:
+                alert("giá của đồ uống là: 18000 VND")
+                let amount6=parseInt(prompt("nhập số lượng"));
+                let payMent6=amount6*18000;
+                alert("số tiền thanh toán: "+payMent6);
+                break;
+            case 7:
+                check=false;
+                break;
+        }
+    }while (check)
+</script>
+</body>
+</html>
